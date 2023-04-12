@@ -95,4 +95,6 @@ total_point: 100
 
 ## Screenshot
 ![enter image description here](https://raw.githubusercontent.com/thanhne/marvyco-ar-minigame/master/screenshot.png)
-## Thank You So much
+
+### Sử dụng các công nghệ: Laravel, html, css, jquery, Nunito font
+*Do chưa từng làm game trước đây và thơi gian hạn hẹp nên bài test interview còn nhiều vấn đề chưa được giải quyết rất mong nhận được sự đống góp từ mọi người Anh. Xin chân thành cảm ơn Anh*
