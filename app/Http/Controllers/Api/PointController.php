@@ -10,6 +10,11 @@ use App\Http\Resources\PointResource;
 
 class PointController extends Controller
 {
+    /**
+     * Post point
+     * @param Request $request [input data]
+     * @return json;
+     */
     public function post_point(Request $request)
     {
         $validatedData = $request->validate([
