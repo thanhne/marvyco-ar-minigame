@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 use App\Models\Point;
@@ -17,11 +19,19 @@ class PointController extends Controller
      */
     public function post_point(Request $request)
     {
-        $validatedData = $request->validate([
-            'user_id' => 'required',
-            'game_id' => 'required',
-            'total_point' => 'required|min:0',
-        ]);
+        try {
+            $validatedData = $request->validate([
+                'user_id' => 'required',
+                'game_id' => 'required',
+                'total_point' => 'required|min:0',
+            ]);
+        } catch(ValidationException $e) {
+            $errors = $e->errors();
+            return new JsonResponse([
+                'message' => 'failed',
+                'errors' => $errors
+            ], 422);
+        }
 
         $point = Point::create($validatedData);
 

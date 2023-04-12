@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources;
 
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
-class PointResource extends ResourceCollection
+class PointResource extends JsonResource
 {
     /**
      * Transform the resource collection into an array.
@@ -14,6 +14,13 @@ class PointResource extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'message' => 'success',
+            'data' => [
+                'user_id' => $this->user_id,
+                'game_id' => $this->game_id,
+                'total_point' => $this->total_point,
+            ],
+        ];
     }
 }

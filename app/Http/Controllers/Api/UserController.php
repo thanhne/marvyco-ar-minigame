@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 use App\Models\User;
@@ -40,10 +42,18 @@ class UserController extends Controller
      */
     public function register(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required',
-            'phone_number' => 'required',
-        ]);
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required',
+                'phone_number' => 'required',
+            ]);
+        } catch(ValidationException $e) {
+            $errors = $e->errors();
+            return new JsonResponse([
+                'message' => 'failed',
+                'errors' => $errors
+            ], 422);
+        }
 
         $user = User::create($validatedData);
 
