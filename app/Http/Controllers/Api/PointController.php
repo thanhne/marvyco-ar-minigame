@@ -20,7 +20,7 @@ class PointController extends Controller
         $validatedData = $request->validate([
             'user_id' => 'required',
             'game_id' => 'required',
-            'total_point' => 'required',
+            'total_point' => 'required|min:0',
         ]);
 
         $point = Point::create($validatedData);
