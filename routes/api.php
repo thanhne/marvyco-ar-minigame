@@ -21,21 +21,30 @@ use Illuminate\Support\Facades\Route;
 // });
 
 /**
- * Endpoint get all users
+ * middleware
+ * throttle:100,60 Rate limit 100 request per 60 second
+ * checkExcutionTime check excutiontime just allow <200ms
+ * CheckOriginRequest must be in $allowedOrigins = ['http://localhost:8009', 'http://127.0.0.1:8009'];
+ *  (config here app\Http\Middleware\CheckOriginRequest.php) $allowedOrigins = [];
  */
-Route::get('/users', [UserController::class, 'get_users']);
+Route::middleware(['throttle:100,60', 'checkExcutionTime', 'checkOriginRequest'])->group(function () {
+    /**
+     * Endpoint get all users
+     */
+    Route::get('/users', [UserController::class, 'get_users']);
 
-/**
- * Endpoint get a user by id
- */
-Route::get('/user/{user_id}', [ UserController::class, 'get_user' ]);
+    /**
+     * Endpoint get a user by id
+     */
+    Route::get('/user/{user_id}', [ UserController::class, 'get_user' ]);
 
-/**
- * Endpoint user register
- */
-Route::post('/user', [UserController::class, 'register']);
+    /**
+     * Endpoint user register
+     */
+    Route::post('/user', [UserController::class, 'register']);
 
-/**
- * Endpoint post point
- */
-Route::post('/point', [PointController::class, 'post_point']);
+    /**
+     * Endpoint post point
+     */
+    Route::post('/point', [PointController::class, 'post_point']);
+});
