@@ -35,6 +35,9 @@ class PointController extends Controller
 
         $point = Point::create($validatedData);
 
-        return new PointResource($point);
+        return new JsonResponse([
+            'message' => 'success',
+            'data' => new PointResource($point)
+        ]);
     }
 }

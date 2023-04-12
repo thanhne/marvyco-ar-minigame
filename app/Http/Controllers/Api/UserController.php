@@ -45,7 +45,7 @@ class UserController extends Controller
         try {
             $validatedData = $request->validate([
                 'name' => 'required',
-                'phone_number' => 'required',
+                'phone_number' => 'required|unique:users',
             ]);
         } catch(ValidationException $e) {
             $errors = $e->errors();
@@ -57,6 +57,12 @@ class UserController extends Controller
 
         $user = User::create($validatedData);
 
-        return new UserResource($user);
+        $token = $user->createToken('api-token')->plainTextToken;
+
+        return new JsonResponse([
+            'message' => 'success',
+            'data' => new UserResource($user),
+            'token' => $token
+        ]);
     }
 }

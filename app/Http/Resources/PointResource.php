@@ -15,12 +15,9 @@ class PointResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'message' => 'success',
-            'data' => [
-                'user_id' => $this->user_id,
-                'game_id' => $this->game_id,
-                'total_point' => $this->total_point,
-            ],
+            'user_id' => $this->user_id,
+            'game_id' => $this->game_id,
+            'total_point' => $this->total_point
         ];
     }
 }

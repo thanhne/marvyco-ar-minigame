@@ -46,5 +46,5 @@ Route::middleware(['throttle:100,60', 'origin', 'excution'])->group(function () 
     /**
      * Endpoint post point
      */
-    Route::post('/point', [PointController::class, 'post_point']);
+    Route::post('/point', [PointController::class, 'post_point'])->middleware('auth:sanctum');
 });
