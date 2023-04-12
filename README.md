@@ -1,64 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Marvyco Bài test làm AR Game
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Request
+"Khách hàng A đang muốn làm 1 game AR. Với game này, người chơi có thể click vật phẩm để nhận điểm.  
+Có 2 loại vật phẩm:  
+1. Vật phẩm cộng điểm: **Nhẫn +5d, dây chuyền +10đ, kim cương trắng +20đ.**  
+2.Vật phẩm trừ điểm: **Kim cương đen: -10đ.**  
+  
+Thời gian chơi là **30s**  
+Điểm có thể giao động từ 0-500đ or trường hợp ngoại lệ (hiếm khi).  
+  
+Sau khi chơi xong, điểm số của **từng vòng** đó sẽ được lưu lại trên database thông qua API  
+Có 4 API:  
++ API để đăng kí user: tên, sđt.  
++ API post điểm (userid, gameid, tổng điểm) trả về success or failed.  
++ API để get thông tin của từng user (userid) trả về thông tin người chơi (tên, sđt, điểm).  
++ API để get thông tin của tất cả user (tên, sđt, điểm).  
+  
+Yêu cầu :  
++ Điểm phải nhất quán **không có điểm âm**.  (*validate min:0 khii post điểm*)
++ Tránh việc sửa điểm, post điểm không hợp lệ, có **token** xác thực theo rule quy định nội bộ  (*tạo token cho user khi đăng ký*)
++ DDOS để post điểm liên tục.  (*throttle:100,60 Rate limit 100 request per 60 second*)
++ API yêu cầu thời gian dưới 200ms.  (*excution time limit < 200ms*)
++ Kiểm tra origin của request." (*bảo vệ ứng dụng của mình khỏi các cuộc tấn công từ các tên miền hoặc trang web khác*)
 
-## About Laravel
+## How to run:
+Clone project
+ 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    git clone https://github.com/thanhne/marvyco-ar-minigame.git
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Cập nhật vendor
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    composer install
 
-## Learning Laravel
+Tạo database trong mysql tên **mini_game**
+tạo file .env
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    cat .env.example > .env
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    php artisan key:generate
 
-## Laravel Sponsors
+cập nhật lại file .env cho phù hợp.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Tạo database với lệnh migration
 
-### Premium Partners
+    php artisan migrate
+    
+Run Project
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    php artisan serve --port 8009
 
-## Contributing
+Link test: http://localhost:8009 hoặc http://127.0.0.1:8009
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Api endpoint
 
-## Code of Conduct
+### get all user
+Get: http://localhost:8009/api/users
+### get a user
+Get: http://localhost:8009/api/user/{user_id}
+### create user
+Post: http://localhost:8009/api/user
+##### request: 
+name: Thành
+phone_number: 0898011993
+##### response: 
+    {
+    	"message": "success",
+    	"data": {
+    		"name": "Thành222",
+    		"phone_number": "1321132113231zzzz",
+    		"points": []
+    	},
+    	"token": "4|pKHdgHO6Z0MbeuFUutGpzgXbUHyCwYeSsTklKXps"
+    }
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### post point
+http://localhost:8009/api/point
+##### headers:
+Authorization: Bearer ${token}
+##### request:
+user_id: 1
+game_id: 1
+total_point: 100
+##### response:
 
-## Security Vulnerabilities
+    {
+    	  "message": "success",
+    	  "data": {
+    		   "user_id": "1",
+    		   "game_id": "1",
+    		   "total_point": "10"
+    	  }
+    }
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Screenshot
+![enter image description here](https://raw.githubusercontent.com/thanhne/marvyco-ar-minigame/master/screenshot.png)
+## Thank You So much
