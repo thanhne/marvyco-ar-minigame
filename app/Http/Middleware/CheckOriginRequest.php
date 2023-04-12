@@ -19,6 +19,14 @@ class CheckOriginRequest
         $allowedOrigins = ['http://localhost:8009', 'http://127.0.0.1:8009'];
         $origin = $request->header('Origin');
 
+        /**
+         * For debugger
+         */
+        if($origin == null) {
+            $response = $next($request);
+            return $response;
+        }
+
         if (in_array($origin, $allowedOrigins)) {
             return $next($request);
         }

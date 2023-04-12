@@ -23,11 +23,11 @@ use Illuminate\Support\Facades\Route;
 /**
  * middleware
  * throttle:100,60 Rate limit 100 request per 60 second
- * checkExcutionTime check excutiontime just allow <200ms
- * CheckOriginRequest must be in $allowedOrigins = ['http://localhost:8009', 'http://127.0.0.1:8009'];
+ * excution|checkExcutionTime check excutiontime just allow <200ms
+ * origin|CheckOriginRequest must be in $allowedOrigins = ['http://localhost:8009', 'http://127.0.0.1:8009'];
  *  (config here app\Http\Middleware\CheckOriginRequest.php) $allowedOrigins = [];
- */
-Route::middleware(['throttle:100,60', 'checkExcutionTime', 'checkOriginRequest'])->group(function () {
+ */ 
+Route::middleware(['throttle:100,60', 'origin', 'excution'])->group(function () {
     /**
      * Endpoint get all users
      */
