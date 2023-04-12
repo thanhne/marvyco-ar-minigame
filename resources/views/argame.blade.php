@@ -13,10 +13,16 @@
 
         <!-- Styles -->
         <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
+            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:82rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
         </style>
 
         <style>
+            ul {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+                overflow-y:scroll;
+            }
             body {
                 font-family: 'Nunito', sans-serif;
             }
@@ -42,6 +48,11 @@
 
             header button:hover {
                 box-shadow: 1px 2px 3px #666; 
+            }
+
+            header #count_down {
+                font-size: 28px;
+                color: #f95;
             }
 
             .color-group {
@@ -82,6 +93,42 @@
             .color-group:nth-child(1) .color-block:nth-child(1) div {
                 border-top-left-radius: 3px;
             }
+
+            #show_item {
+                float: left; 
+                width: 70%;
+                position: relative;
+            }
+
+            #show_item .mark {
+                background-color: #000;
+                opacity: .8;
+                height: 100%;
+                position: absolute;
+                z-index: 888;
+                width: 95%;
+            }
+
+            #show_item .play-button {
+                background: #ecd40c;
+                box-shadow: 1px 2px 3px #fff;
+                position: absolute;
+                z-index: 999;
+                top: 40%;
+                left: 42%;
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            #show_item .play-button:hover {
+                opacity: .8;
+                box-shadow: 1px 2px 3px #000;
+                width: 101px;
+                height: 101px;
+            }
         </style>
     </head>
     <body class="antialiased">
@@ -90,19 +137,29 @@
                 <div class="mt-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div style="color: #fff;">
                         <header style="float: left; width: 100%">
-                            <h1 class="text-center">AR game mở quà</h1>
-                            <div class="text-center" id="register">
+                            <h1 class="text-center">AR game mở vật phẩm</h1>
+                            <h2 class="text-center">Bạn còn <span id="count_down">30</span>s để mở vật phẩm</h2>
+                            <div class="text-center" id="register" style="display: none">
                                 <label>Tên: <input type="text" size="50" name="name" placeholder="Nhập tên của bạn" /></label>
                                 <label>Số điện thoại: <input type="text" size="50" name="phone_number" placeholder="Nhập tên của bạn" /></label>
                                 <button class="mx-1" type="button" name="register" aria-label="Đăng ký">Tạo tài khoản</button>
                             </div>
+                            <div class="text-center" id="user_info" style="display: none">
+                                <label>Tên: <span id="name" style="font-size: 18px; color: #f95"></span></label>
+                                <label>Số điện thoại: <span id="phone_number" style="font-size: 18px; color: #f95"></span></label>
+                                <button class="mx-1" type="button" onclick="logout()" aria-label="Đăng ký">Thoát</button>
+                            </div>
                         </header>
-                        <div id="show_item" class="p-6" style="float: left; width: 70%;"></div>
+                        <div id="show_item" class="p-6">
+                            <button type="button" class="play-button" onclick="play_button()" aria-label="play button">PLAY</button>
+                            <div class="mark"></div>
+                        </div>
                         <div id="total_point" style="float: left; width: 30%;">
-                            <h2>Tông điểm: <span id="point">0</span></h2>
+                            <h2>Tổng điểm: <span id="point">0</span></h2>
                         </div>
                         <div id="total_users_point" style="float: left; width: 30%;">
                             <h2>Danh sách user:</h2>
+                            <ul id="users"></ul>
                         </div>
                     </div>
                 </div>
@@ -167,7 +224,6 @@
                     },
                 ];
                 shuffle(items);
-                //debugger;
 
                 let get_item = items[0];
 
@@ -181,16 +237,67 @@
                 console.log(total_point);
             }
 
-            function total_point()
+            function user_info()
             {
+                let token = getcookie("api_token");
+                let user_info = getcookie("user_info");
 
+                let check_token = typeof token != "undefined" && token != null && token != "";
+                let check_user_info = typeof user_info != "undefined" && user_info != null && user_info != "";
+
+                if(!check_token || !check_user_info) {
+                    $("#register").css("display", "block");
+                }
+
+                if(check_token && check_user_info) {
+                    $("#user_info").css("display", "block");
+                    user_info = JSON.parse(user_info);
+                    $("#user_info #name").text(user_info.name);
+                    $("#user_info #phone_number").text(user_info.phone_number);
+                }
+            }
+            
+            function logout()
+            {
+                setcookie("api_token", null, 1);
+                setcookie("user_info", null, 1);
+                window.location.reload();
+            }
+
+            function play_button()
+            {
+                $("#total_point #point").text(0);
+                //typeof user_info != "undefined" && user_info != null && user_info != "";
+                let user_info = getcookie("user_info");
+                if(typeof user_info != "undefined" && user_info != null && user_info != "") {
+                    user_info = JSON.parse(user_info);
+                    var user_id = user_info.id;
+                    $('.play-button').hide();
+                    $('.mark').css("display", "none");
+                    var count_down = 30, x = setInterval(function () {
+                        console.log(--count_down);
+                        $("#count_down").text(count_down);
+                        if (count_down === 0) {
+                            console.info("Post Point");
+                            var total_point = parseInt($("#total_point #point").text());
+                            if(typeof total_point != "number") {
+                                total_point = 0;
+                            }
+                            post_point(user_id, 1, total_point);
+                            $('.play-button').show();
+                            $('.mark').css("display", "block");
+                            $("#count_down").text(30);
+                            get_users();
+                            clearInterval(x);
+                        }
+                    }, 1000);
+                } else {
+                    alert("Vui lòng nhập tên và số điện thoại");
+                }
             }
 
             function show_item(items)
             {
-               // console.log(items);
-                //shuffle(items);
-               // console.log(items);
                 var rs = "";
                 var item_html = "";
                 for (let i = 0; i < items.length; i++) {
@@ -202,7 +309,7 @@
                     
                 }
 
-                $("#show_item").html(rs);
+                $("#show_item").append(rs);
 
                 //pick item
                 $(".js-color").on('click', function() {
@@ -215,34 +322,118 @@
                     let phone_number = $("#register input[name=phone_number]").val();
                     post_register(name, phone_number);
                 });
+
+                user_info();
+                get_users();
             }
             show_item(color_list);
 
             /**
              * work with data
              */
+            function get_users()
+            {
+                $.ajax({
+                    url: "api/users",
+                    type: "GET",
+                    success: function(data, status) {
+                        var users = data.data;
+                        var rs = "";
+                        for (let index = 0; index < users.length; index++) {
+                            const user = users[index];
+                            
+                            var name = user.name;
+                            var phone_number = user.phone_number;
+                            
+                            /** 
+                             * Find max point of user
+                             */
+                            var points = user.points;
+                            var total_point = 0;
+                            for (let j = 0; j < points.length; j++) {
+                                const point = points[j];
+                                let tt_point = point.total_point;
+                                if(tt_point > total_point) {
+                                    total_point = tt_point;
+                                }
+                            }
+                            
+                            rs += `<li>${name} - <strong>sdt</strong>: ${phone_number} - ${total_point}điểm</li>`;
+                            
+                        }
+
+                        $("#users").html(rs);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error: " + error);
+                    }
+                });
+            }
+
             function post_point(user_id, game_id, total_point)
             {
-                $.post("api/user",
-                {
-                    user_id: user_id,
-                    total_point: total_point,
-                    game_id: game_id
-                }, function(data, status) {
-                    console.log(data);
-                    //alert("Data: " + data + "\nStatus: " + status);
+                var token = getcookie("api_token");
+                $.ajax({
+                    url: "api/point",
+                    type: "POST",
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    },
+                    data: {
+                        user_id: user_id,
+                        total_point: total_point,
+                        game_id: game_id
+                    },
+                    success: function(data, status) {
+                        console.log(data);
+                        //alert("Data: " + data + "\nStatus: " + status);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error: " + error);
+                    }
                 });
             }
 
             function post_register(name, phone_number)
             {
-                $.post("api/user",
-                {
-                    name: name,
-                    phone_number: phone_number
-                }, function(data, status) {
-                    console.log(data);
+                $.ajax({
+                    url: "api/user",
+                    type: "POST",
+                    data: {
+                        name: name,
+                        phone_number: phone_number
+                    },
+                    success: function(data, status) {
+                        console.log(status);
+                        setcookie("api_token", data.token, 1);
+                        setcookie("user_info", JSON.stringify(data.data), 1);
+                        window.location.reload();
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error: " + error);
+                    }
                 });
+            }
+
+            function setcookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            }
+
+            function getcookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
             }
         </script>
     </body>
